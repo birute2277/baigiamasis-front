@@ -1,38 +1,339 @@
 .App {
+  height: 150vh;
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  font-family: monospace;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  color: #1b353d;
+  padding: 2px 10px;
+  border-radius: 3px;
+}
+/*------FLEX----------------*/
+.d-flex {
   display: flex;
+}
+.space-btw {
+  justify-content: space-between;
+}
+.wrap {
+   flex-wrap: wrap;
+ }
+.space-around {
+  justify-content: space-around;
+}
+.just-evenly {
+  justify-content: space-evenly;
+}
+.justify-center {
+  justify-content: center;
+}
+.column {
   flex-direction: column;
+}
+.align-center {
+  align-items: center;
+}
+.j-c-s-around {
+  justify-content: space-around;
+}
+.column-reverse {
+  flex-direction: column-reverse;
+}
+.j-c-end {
+  justify-content: end;
+}
+/*----------------------------------*/
+.p-r-100 {
+  padding-right: 250px;
+}
+.m-r-100 {
+  margin-right: 100px;
+}
+.m-50 {
+  margin: 50px;
+}
+.m-20 {
+  margin: 20px;
+}
+.p-20 {
+  padding: 20px;
+}
+.grow2 {
+  flex: 2;
+}
+.grow3 {
+  flex: 3;
+}
+.width {
+  width: 450px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 60px;
+
+}
+.w-300 {
+  width: 370px;
+}
+.w-200 {
+  width: 200px;
+}
+.min-400 {
+  min-height: 400px;
+}
+.border {
+  border: 2px solid #594949;
+}
+.title {
+  font-size: 24px;
+  margin: 40px 0 20px 0;
+}
+/*-----LOGO-------------------------------*/
+.logo {
+  border-radius: 50%;
+  padding: 20px;
+  text-decoration: none;
+  margin-left: 60px;
+}
+.logo:hover {
+  background-color: rgba(64, 162, 148, 0.61);
+  box-shadow: 5px 5px 15px 5px rgba(57, 113, 129, 0.55);
+}
+.logo h5 {
+  margin: 0!important;
+}
+/*------TOOLBAR----------------*/
+.toolbar {
+  margin-top: 20px;
+  width: 95%;
+  height: 25px;
+  padding: 20px 60px;
+  background-color: rgba(117, 196, 167, 0.81);
+  color: #323b46;
+  font-size: 25px;
+}
+.search {
+  size: 20px
+}
+.search:hover {
+  size: 50px
+}
+.register {
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 21px;
+}
+.register:hover {
+  text-decoration: underline solid 3px;
+}
+.login {
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 21px;
+}
+.login:hover {
+  text-decoration: underline solid 3px;
+}
+.Logout {
+  width: 70px;
+}
+/*-----------USER--------------------------------*/
+.user-box {
+  width: 120px;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.side-box {
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+}
+.userPhoto {
+  width: 50px;
+  height: 50px;
+  border: #1b353d 2px solid;
+  border-radius: 50%;
+}
+.userPhoto:hover {
+  width: 60px;
+  height: 60px;
+}
+.photoHover{
+  width: 65px;
+}
+/*-------------------SEARCH------------------------------*/
+.search-box {
+  position: fixed;
+  top: 83px;
+  bottom: 100px;
+  left: 0;
+  height: auto;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+  background: rgba(49, 121, 180, 0.42);
+  width: 200px;
+}
+/*-----------------FOOTER-------------------------------------------------*/
+.footer {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #68588a;
+  padding:10px 150px 50px 0;
+  margin: 20px 200px 0 0;
+}
+@media (max-width: 525px) {
+  .footer  {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.footerLink {
+  font-size: 14px;
+  margin: 0!important;
+}
+.footerP {
+  font-size: 14px;
+  margin: 0!important;
+}
+/*--------SINGLE TOPIC--------------*/
+.topic {
+  width: 1200px;
+  margin: 30px;
+  padding: 10px 40px;
+  background-color: #d2f1e6;
+}
+.title-box {
+  width: 100%;
+  height: 60px;
+  padding-bottom: 20px;
+  border-bottom: #323b46 solid 3px;
+}
+.user-boxT {
+  width: 240px;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center;
+}
+.underline{
+  font-size: 18px;
+}
+.photoHoverH{
+   height: 90px;
+   width: 90px;
+ }
+.underline:hover{
+  text-decoration: underline;
+}
+/*-------------youtube------------*/
+.player-wrapper{
+  position: relative;
+ /*max-height:200px;*/
+ /* max-width:340px;*/
+  margin:5px;
+}
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*-------SOCKET MESSAGE------------*/
+.socket-message{
+min-height: 40px;
+  color:#93e3d7;
+}
+.pointer{
+  cursor: pointer;
+}
+/*--------ALL POSTS------------*/
+.post-box {
+  height: 260px;
+  width: 1200px;
+  margin: 20px;
+  border-bottom: #323b46 3px solid;
+}
+.post-image-box {
+   width: 400px;
+   height: 250px;
+ }
+.post-image {
+  max-width: 300px;
+  max-height: 200px;
+  background-size:contain;
+  cursor: pointer;
+  padding: 10px;
+}
+.post-text {
+  height: 70px;
+  width: 500px;
+  background-color: rgba(210, 241, 230, 0.19);
+  padding: 80px 0 20px 20px;
+  margin: 10px;
+}
+.b-create-post {
+  position:fixed;
+    right: 200px;
+    top: 133px;
+  background-color: #f3c7d6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*-------------------------------------------------------------*/
+button {
+  height: 40px;
+  width: 180px;
+  background-color: #93e3d7;
+  border-radius: 3px;
+  font-size: 18px;
+  color: #645f55;
 }
+button:hover {
+  background-color: #3cdcc4;
+}
+.image-box {
+  width: 350px;
+  height: 350px;
+  border: #1b353d 2px solid;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 15px 5px rgba(57, 113, 129, 0.55);
+}
+.image-box:hover {
+  background-color: #93e3d7;
+}
+/*----------------------------------------------------*/
+
+input {
+  height: 40px;
+  width: 280px;
+  background-color:#e6c7e7;
+  margin: 20px;
+  font-size: 18px;
+  color: #645f55;
+}
+.input {
+  height: 40px;
+  width: 280px;
+  background-color: #e6c7e7;
+  margin: 20px;
+  border: 2px solid black;
+  font-size: 18px;
+  color: #645f55;
+  align-items: center;
+}
+
