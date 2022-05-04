@@ -39,8 +39,8 @@ const RegisterPage = () => {
             <h1>Register</h1>
             <input type="text" ref={nameRef} placeholder="Name"/>
             <input type="text" ref={pass1Ref} placeholder="Password one"/>
-            <input type="text" ref={pass2Ref} placeholder="Password two"/>
-            <input type="text" size="60" ref={photoRef} placeholder="Photo"/>
+            <input type="text" ref={pass2Ref} placeholder="Repeat password"/>
+            <input type="text" size="60" ref={photoRef} placeholder="Photo must includes 'http'"/>
 
             <button onClick={registerUser}>Register</button>
             <h3>{message}</h3>

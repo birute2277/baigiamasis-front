@@ -1,21 +1,17 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from 'react';
 import http from "../plugins/http";
-import {useNavigate, Link} from "react-router-dom";
-// import ReactPlayer from "react-player/youtube";
+import {useNavigate} from "react-router-dom";
 import ReactPlayer from "react-player/";
-import ReactDOM from "react-dom";
-import ReactPaginate from 'react-paginate';
+// import ReactPaginate from 'react-paginate';
 
-const items = [1, 2, 3, 4, 5, 6, 7]
-;
+// const items = [1, 2, 3, 4, 5, 6, 7];
 const SingleTopic = ({userinfo}) => {
     const [singleTopic, setSingleTopic] = useState([])
     const [topicName, setTopicName] = useState("")
     const {id} = useParams()
-    // const priceRef =useRef()
-    //const [singleTopics, setSingleTopics] = useState([])
+
 
     // <Pagination
     // count={10}
@@ -26,7 +22,6 @@ const SingleTopic = ({userinfo}) => {
     //     />
     // )}
     // />
-
 
     const nav = useNavigate()
 
@@ -44,7 +39,6 @@ const SingleTopic = ({userinfo}) => {
             if (res.success) {
                 setSingleTopic(res.singleTopic.posts)
                 setTopicName(res.singleTopic.title)
-                // setUserinfo(res.singleTopic.posts)
             }
         })
     }
@@ -63,15 +57,14 @@ const SingleTopic = ({userinfo}) => {
 
             <div className="d-flex column align-center justify-center">
                 {singleTopic.map((x, i) =>
-                    <div className="d-flex post-box space-around" key={i}>
+                    <div className=" post-box space-around" key={i}>
 
-                        <div className=" d-flex post-image-box">
+                        <div className=" post-image-box">
                             {x.photo &&
                             <img className="post-image" src={x.photo} alt=""/>
                             }
                             {x.youtubeUrl &&
                             <div className="player-wrapper">
-                                <a href={x.youtubeUrl}>{x.youtubeUrl}</a>
                                 <ReactPlayer className="react-player" url={x.youtubeUrl} width='370px' height='210px'
                                              controls={true}/>
                             </div>

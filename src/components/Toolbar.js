@@ -18,7 +18,7 @@ const Toolbar = ({toolbar, setToolbar, userinfo, setUserinfo}) => {
     return (
         <div className="d-flex toolbar  align-center space-btw">
             {!toolbar && <>
-                <div className="m-r-100">
+                <div className="m-r-120">
                      <FaSearch size="35px"
                     onMouseOver={({target})=>target.style.color="rgba(64, 162, 148, 0.61)"}
                     onMouseOut={({target})=>target.style.color="black"}
@@ -43,7 +43,7 @@ const Toolbar = ({toolbar, setToolbar, userinfo, setUserinfo}) => {
             </>
             }
             {toolbar && <>
-                <div className="m-r-100">
+                <div className="m-r-120">
                     <Link to="/search"> <FaSearch size="35px"
                                                   onMouseOver={({target})=>target.style.color="rgba(64, 162, 148, 0.61)"}
                     /></Link>
